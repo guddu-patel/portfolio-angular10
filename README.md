@@ -2,9 +2,40 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
+
+# Starting project
+Clone the code from the [repo](https://github.com/guddu-patel/portfolio-angular10) then 
+
+Enter inside folder portfolio-angular9-master
+
+```bash
+    cd portfolio-angular10-master
+```
+
+Update npm to install all dependency
+
+```bash
+    npm install
+```
+# Setup environment
+add below lines in your environment file environment.ts at envirement const
+```bash
+    baseUrl: "https://node-js-resume-api.herokuapp.com",
+    postCategory: ['News', 'Technical', 'Educational', 'Entertainment']
+```
+eg:
+```bash
+    export const environment = {
+        production: false,
+        baseUrl: "https://node-js-resume-api.herokuapp.com",
+        postCategory: ['News', 'Technical', 'Educational', 'Entertainment']
+    };
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+And that's it you are done navigate to your browser and see your running project
 
 ## Code scaffolding
 
@@ -25,3 +56,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
