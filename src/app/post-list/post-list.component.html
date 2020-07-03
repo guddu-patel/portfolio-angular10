@@ -1,0 +1,52 @@
+<div style="background-color: black;height: 61px;">
+</div>
+<br>
+<!-- blog Section -->
+<section id="blog" class="section bg" style="padding: 5px 50px;">
+    <h3 class="main-heading">Blogs</h3>
+    <div class="container">
+        <!-- <div class="row mar-30">
+            <ul class="recent-blog-list" [attr.id]="location.path()==''?'recent-blog-list':''">
+                <li *ngFor="let blog of blogs;trackBy: trackblog;let i=index" [routerLink]="['/post',blog._id]">
+                    <div class="blog-post-box">
+                        <div class="blog-post-img"><img src="{{imgBase}}/{{blog.post_image}}" alt=""
+                                style="height: 250px;" /> <b class="post-date">{{blog.updatedAt | date:'E, d MMM'}}
+                                <span>{{blog.updatedAt | date:'y'}}</span></b>
+                        </div>
+                        <div class="blog-content">
+                            <p class="category">All</p>
+                            <h5 class="lineText1"><a href="#">{{blog.title}}</a></h5>
+                            <p class="lineText5">{{blog.description}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div> -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6 " *ngFor="let blog of blogs;trackBy: trackblog;let i=index"
+                [routerLink]="['/post',blog._id]">
+                <div class="timeline-content p-0">
+                    <div class="blog-post-img">
+                        <img src="{{imgBase}}/{{blog.post_image}}" alt="" style="height: 200px;width: 100%;" />
+                        <b class="post-date">{{blog.updatedAt | date:'E, d MMM'}}
+                            <span>{{blog.updatedAt | date:'y'}}</span></b>
+                    </div>
+                    <div class="card-body text-dark" style="padding: 10px 20px;color: black;">
+                        <h5 class="card-title lineText1">{{blog.title}}</h5>
+                        <p class="card-text lineText2">{{blog.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="blogs">
+            <div class="col-sm-4 col-sm-offset-4 text-center">
+                <!-- <a *ngIf="location.path()==''" [routerLink]="['/blog/list']" href="#"
+                    class="btn btn-default btn-lg btn-block os-animation" data-os-animation="fadeInUp"
+                    data-os-animation-delay="0.2s">View all posts</a> -->
+                <button *ngIf="location.path() !='' && activePage!=-1" (click)="getPosts()"
+                    class="btn btn-default btn-lg btn-block os-animation" data-os-animation="fadeInUp"
+                    data-os-animation-delay="0.2s">Load more</button>
+            </div>
+        </div>
+    </div>
+</section>

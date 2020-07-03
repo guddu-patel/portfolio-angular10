@@ -1,0 +1,66 @@
+<div style="background-color: black;height: 61px;">
+</div>
+<br>
+<div class="row" style="margin: 0;">
+    <h5 class="text-center">{{editMode?'Edit':'Add'}} post</h5>
+    <hr class="m-0"><br>
+    <div class="col-sm-6 col-sm-offset-3">
+        <form [formGroup]="postForm" id="postForm" (ngSubmit)="sendPost()" enctype="multipart/form-data" method="post">
+            <!-- <input type="hidden" name="_id" id="_id" formControlName='_id'> -->
+            <div class="form-group">
+                <label for="email">Title:</label>
+                <input formControlName="title" type="text" class="form-control" id="title" name="title"
+                    placeholder="Enter post tile">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea formControlName="description" type="text" class="form-control" id="description"
+                    name="description" placeholder="Enter description" style="height: 75px;"></textarea>
+
+            </div>
+            <div class="form-group">
+                <label for="description">Page content:</label>
+                <ckeditor [editor]="Editor" formControlName="page_content" id="page_content" name="page_content"
+                    [config]="config"></ckeditor>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="post_image">Post image:</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control hidden" id="post_image" placeholder="Enter post tile"
+                            formControlName="post_image" (change)="changeFile($event)" accept="image/*">
+                        <input type="text" disabled class="form-control"
+                            placeholder="{{selectedFile?selectedFile.name:'Choose file'}}" style="height:42px">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" style="padding: 10px;"
+                                onclick="$('#post_image').click()">Browse
+                            </button>
+                        </div>
+
+                    </div>
+                    <img *ngIf="imagePreview" src="{{imagePreview}}" class="img-thumbnail previewImage" alt="Image err">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="post_image">Category:</label>
+
+                    <select name="category" id="category" class="form-control" required formControlName="category">
+                        <option value="" disabled selected>Select category</option>
+                        <option value="all">All</option>
+                        <option *ngFor="let category of categories" [value]="category.toLowerCase()"
+                            class="text-capitalize">
+                            {{category}}</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div> -->
+            <button type="submit" [disabled]="submitted || postForm.invalid" class="btn btn-default">Submit</button>
+            <button [routerLink]="['/admin/dashboard']" type="submit" class="btn btn-danger"
+                style="margin-left: 5px;">Cancel</button>
+        </form>
+        <br>
+        <br>
+    </div>
+
+</div>

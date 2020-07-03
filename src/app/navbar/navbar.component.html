@@ -1,0 +1,55 @@
+<!-- =====================  header start  ===================== -->
+<header>
+    <div class="container">
+        <div class="header-bar">
+            <div class="logo"><a href="index.html"><img src="assets/images/logo-dark.png" alt=""
+                        class="logo-dark" /><img src="assets/images/logo-light.png" alt="" class="logo-light" /></a>
+            </div>
+            <div class="header-right">
+                <div class="search-icon"><a href="#!"><i class="ti-search"></i></a></div>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank"><i class="ti-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ti-linkedin"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="ti-google"></i></a></li>
+                </ul>
+            </div>
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle
+                            navigation</span><span class="icon-bar"></span> </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="page-scroll" href="#services">Services</a></li>
+                        <li><a class="page-scroll" href="#work">Work</a></li>
+                        <li><a class="page-scroll" href="#experience">Experience</a></li>
+                        <li><a class="page-scroll" href="#skills">Skills</a></li>
+                        <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
+                        <li><a class="page-scroll hero-btn" href="#contact">Hire me</a></li>
+                        <li><a class="page-scroll" [routerLink]="['/post']">Blog</a></li>
+                        <li *ngIf="this.router.url.includes('/admin/') && logged" (click)="logout()"><a
+                                class="page-scroll hero-btn">{{userDetail.name}} <span class="ti-share"></span></a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+<!-- Search Box Start -->
+<div class="search-box-outer">
+    <div class="container">
+        <div class="search-box">
+            <form>
+                <input type="text" value="" class="form-control" placeholder="Type &amp; Hit Enter to Search" />
+            </form>
+            <a href="#!" class="close-search"><i class="ti-close"></i></a>
+        </div>
+    </div>
+</div>
+<!--  ===================== Search Box End =====================  -->

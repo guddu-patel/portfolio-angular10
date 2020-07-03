@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+.btn[disabled]{
+    color: black;
+}
+.lineText,.lineText2{
+    line-height: 1.5em; /* Sets line height to 1.5 times text size */
+    height: 3em; /* Sets the div height to 2x line-height (3 times text size) */
+    width: 100%; /* Use whatever width you want */
+    white-space: normal; /* Wrap lines of text */
+    overflow: hidden; /* Hide text that goes beyond the boundaries of the div */
+    text-overflow: ellipsis; /* Ellipses (cross-browser) */
+    -o-text-overflow: ellipsis; /* Ellipses (cross-browser) */
+}
+
+.lineText1{
+    line-height: 1.5em; /* Sets line height to 1.5 times text size */
+    height: 1.5em; /* Sets the div height to 2x line-height (3 times text size) */
+    width: 100%; /* Use whatever width you want */
+    white-space: normal; /* Wrap lines of text */
+    overflow: hidden; /* Hide text that goes beyond the boundaries of the div */
+    text-overflow: ellipsis; /* Ellipses (cross-browser) */
+    -o-text-overflow: ellipsis; /* Ellipses (cross-browser) */
+}.lineText5{
+    line-height: 1.5em; /* Sets line height to 1.5 times text size */
+    height: 5*1.5em; /* Sets the div height to 2x line-height (3 times text size) */
+    width: 100%; /* Use whatever width you want */
+    white-space: normal; /* Wrap lines of text */
+    overflow: hidden; /* Hide text that goes beyond the boundaries of the div */
+    text-overflow: ellipsis; /* Ellipses (cross-browser) */
+    -o-text-overflow: ellipsis; /* Ellipses (cross-browser) */
+}
+.text-center{
+    text-align: center;
+}
+.m-0{
+    margin: 0;
+}
+.p-0{
+    padding: 0;
+}
+.blog-post-img{
+    position: relative;
+}
+.post-date{
+    position: absolute;
+    width: 72px;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background: #000000c4;
+    padding: 0 5px;
+    font-size: 10px;
+    line-height: 1.5;
+}
