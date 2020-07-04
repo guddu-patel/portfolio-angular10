@@ -14,6 +14,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { ApiInterceptor } from './interceptor/api.interceptor';
 import { PaginationComponent } from './pagination/pagination.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
