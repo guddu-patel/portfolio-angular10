@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
+Live demo [click here](http://sagar.guddu.com.np/)
 
 # Starting project
 Clone the code from the [repo](https://github.com/guddu-patel/portfolio-angular10) then 
